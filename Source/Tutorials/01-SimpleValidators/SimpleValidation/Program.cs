@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Morris.DataAnnotations.ObjectTreeValidator;
+﻿using Morris.DataAnnotations.ObjectTreeValidator;
 using System.ComponentModel.DataAnnotations;
 
 Validate("Name required", new Person());

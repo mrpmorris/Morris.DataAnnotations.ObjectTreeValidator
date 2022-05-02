@@ -18,9 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-SimpleValidation", "01-S
 		Tutorials\01-SimpleValidators\README.md = Tutorials\01-SimpleValidators\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-CollectionLengthValidation", "02-CollectionLengthValidation", "{0DDB239E-D98E-4367-8CAF-41A9E0C844D4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-ComplexPropertyValidation", "02-ComplexPropertyValidation", "{0DDB239E-D98E-4367-8CAF-41A9E0C844D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleValidation", "Tutorials\01-SimpleValidators\SimpleValidation\SimpleValidation.csproj", "{95428567-02AF-4975-A547-FE099089BFBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexPropertyValidation", "Tutorials\02-ComplexPropertyValidation\ComplexPropertyValidation\ComplexPropertyValidation.csproj", "{A1FF8D44-AE50-45A8-A0B9-32E81C190241}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 		{95428567-02AF-4975-A547-FE099089BFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95428567-02AF-4975-A547-FE099089BFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95428567-02AF-4975-A547-FE099089BFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FF8D44-AE50-45A8-A0B9-32E81C190241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FF8D44-AE50-45A8-A0B9-32E81C190241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FF8D44-AE50-45A8-A0B9-32E81C190241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FF8D44-AE50-45A8-A0B9-32E81C190241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{46051627-2318-4F36-A324-D1EAD3AFE0DE} = {3AB71436-916F-4A1D-BA2F-AD01A7DDD538}
 		{0DDB239E-D98E-4367-8CAF-41A9E0C844D4} = {3AB71436-916F-4A1D-BA2F-AD01A7DDD538}
 		{95428567-02AF-4975-A547-FE099089BFBE} = {46051627-2318-4F36-A324-D1EAD3AFE0DE}
+		{A1FF8D44-AE50-45A8-A0B9-32E81C190241} = {0DDB239E-D98E-4367-8CAF-41A9E0C844D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1658B72E-8BE8-49E9-99B1-9E51120E33D7}
