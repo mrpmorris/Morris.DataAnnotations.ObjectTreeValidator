@@ -24,6 +24,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleValidation", "Tutoria
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexPropertyValidation", "Tutorials\02-ComplexPropertyValidation\ComplexPropertyValidation\ComplexPropertyValidation.csproj", "{A1FF8D44-AE50-45A8-A0B9-32E81C190241}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-ComplexTreeValidation", "03-ComplexTreeValidation", "{F5D12AD7-8366-48A3-A519-FEC2102F1718}"
+	ProjectSection(SolutionItems) = preProject
+		Tutorials\03-ComplexTreeValidation\README.md = Tutorials\03-ComplexTreeValidation\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexTreeValidation", "Tutorials\03-ComplexTreeValidation\ComplexTreeValidation\ComplexTreeValidation.csproj", "{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +49,10 @@ Global
 		{A1FF8D44-AE50-45A8-A0B9-32E81C190241}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1FF8D44-AE50-45A8-A0B9-32E81C190241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1FF8D44-AE50-45A8-A0B9-32E81C190241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +62,8 @@ Global
 		{0DDB239E-D98E-4367-8CAF-41A9E0C844D4} = {3AB71436-916F-4A1D-BA2F-AD01A7DDD538}
 		{95428567-02AF-4975-A547-FE099089BFBE} = {46051627-2318-4F36-A324-D1EAD3AFE0DE}
 		{A1FF8D44-AE50-45A8-A0B9-32E81C190241} = {0DDB239E-D98E-4367-8CAF-41A9E0C844D4}
+		{F5D12AD7-8366-48A3-A519-FEC2102F1718} = {3AB71436-916F-4A1D-BA2F-AD01A7DDD538}
+		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F} = {F5D12AD7-8366-48A3-A519-FEC2102F1718}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1658B72E-8BE8-49E9-99B1-9E51120E33D7}

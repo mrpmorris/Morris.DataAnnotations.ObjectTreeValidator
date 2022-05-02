@@ -8,7 +8,7 @@ Validate("Name just right", new Manager { Name = "1234" });
 
 static void Validate(string scenario, Manager manager)
 {
-	Console.WriteLine($"Scenario: {scenario}");
+	Console.WriteLine($"\r\nScenario: {scenario}");
 	var office = new Office { Manager = manager };
 	RecursiveValidator.TryValidateObject(office, out ICollection<RecursiveValidationResult> validationResults);
 	foreach (var validationResult in validationResults)

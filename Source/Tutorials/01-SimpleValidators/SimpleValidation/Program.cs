@@ -8,7 +8,7 @@ Validate("Name just right", new Person { Name = "1234" });
 
 static void Validate(string scenario, Person person)
 {
-	Console.WriteLine($"Scenario: {scenario}");
+	Console.WriteLine($"\r\nScenario: {scenario}");
 	RecursiveValidator.TryValidateObject(person, out ICollection<RecursiveValidationResult> validationResults);
 	foreach(var validationResult in validationResults)
 		Console.WriteLine($"{validationResult.FullPath} - {validationResult.ErrorMessage}");
