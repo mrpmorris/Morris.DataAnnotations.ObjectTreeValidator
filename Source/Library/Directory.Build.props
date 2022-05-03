@@ -17,8 +17,10 @@
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<AssemblyOriginatorKeyFile>MrPMorris.snk</AssemblyOriginatorKeyFile>
+		<SignAssembly>True</SignAssembly>
 	</PropertyGroup>
 
 	<PropertyGroup>

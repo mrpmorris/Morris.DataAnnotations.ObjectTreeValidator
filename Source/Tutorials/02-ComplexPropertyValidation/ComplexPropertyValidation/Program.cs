@@ -5,6 +5,7 @@ Validate("Name required", new Manager());
 Validate("Name too short", new Manager { Name = "12" });
 Validate("Name too long", new Manager { Name = "123456" });
 Validate("Name just right", new Manager { Name = "1234" });
+Console.ReadLine();
 
 static void Validate(string scenario, Manager manager)
 {

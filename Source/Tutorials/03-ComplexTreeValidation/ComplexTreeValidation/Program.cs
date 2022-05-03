@@ -26,7 +26,6 @@ Validate("Manage with a two invalid addresses",
 			}.ToList()
 		}
 	});
-
 Validate("Everything is valid",
 	new Office {
 		Address = validAddress,
@@ -38,6 +37,7 @@ Validate("Everything is valid",
 			}.ToList()
 		}
 	});
+Console.ReadLine();
 
 static void Validate(string scenario, Office office)
 {

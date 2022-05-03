@@ -1,1 +1,1 @@
-dotnet build Morris.DataAnnotations.ObjectTreeValidator.sln -c Release
+dotnet build Source\Morris.DataAnnotations.ObjectTreeValidator.sln -c Release

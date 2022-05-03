@@ -5,6 +5,7 @@ Validate("Name required", new Person());
 Validate("Name too short", new Person { Name = "12" });
 Validate("Name too long", new Person { Name = "123456" });
 Validate("Name just right", new Person { Name = "1234" });
+Console.ReadLine();
 
 static void Validate(string scenario, Person person)
 {

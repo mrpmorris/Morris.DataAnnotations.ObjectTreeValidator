@@ -1,2 +1,2 @@
 @call build.bat
-dotnet test -c Release Morris.DataAnnotations.ObjectTreeValidator.sln
+dotnet test -c Release Source\Morris.DataAnnotations.ObjectTreeValidator.sln

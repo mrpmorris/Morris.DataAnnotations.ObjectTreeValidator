@@ -3,12 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morris.DataAnnotations.ObjectTreeValidator", "Morris.DataAnnotations.ObjectTreeValidator\Morris.DataAnnotations.ObjectTreeValidator.csproj", "{9700E47F-CFE4-4DB0-9DF6-EACB15628B86}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38E59057-DA32-43D1-8B86-F0D1215947FC}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		Directory.Build.props = Directory.Build.props
+		Library\Directory.Build.props = Library\Directory.Build.props
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorials", "Tutorials", "{3AB71436-916F-4A1D-BA2F-AD01A7DDD538}"
@@ -22,14 +20,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-ComplexPropertyValidatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleValidation", "Tutorials\01-SimpleValidators\SimpleValidation\SimpleValidation.csproj", "{95428567-02AF-4975-A547-FE099089BFBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexPropertyValidation", "Tutorials\02-ComplexPropertyValidation\ComplexPropertyValidation\ComplexPropertyValidation.csproj", "{A1FF8D44-AE50-45A8-A0B9-32E81C190241}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComplexPropertyValidation", "Tutorials\02-ComplexPropertyValidation\ComplexPropertyValidation\ComplexPropertyValidation.csproj", "{A1FF8D44-AE50-45A8-A0B9-32E81C190241}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-ComplexTreeValidation", "03-ComplexTreeValidation", "{F5D12AD7-8366-48A3-A519-FEC2102F1718}"
 	ProjectSection(SolutionItems) = preProject
 		Tutorials\03-ComplexTreeValidation\README.md = Tutorials\03-ComplexTreeValidation\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexTreeValidation", "Tutorials\03-ComplexTreeValidation\ComplexTreeValidation\ComplexTreeValidation.csproj", "{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComplexTreeValidation", "Tutorials\03-ComplexTreeValidation\ComplexTreeValidation\ComplexTreeValidation.csproj", "{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morris.DataAnnotations.ObjectTreeValidator", "Library\Morris.DataAnnotations.ObjectTreeValidator\Morris.DataAnnotations.ObjectTreeValidator.csproj", "{1A5F5E60-108D-451F-B2E8-E0CFA54A16C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9700E47F-CFE4-4DB0-9DF6-EACB15628B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9700E47F-CFE4-4DB0-9DF6-EACB15628B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9700E47F-CFE4-4DB0-9DF6-EACB15628B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9700E47F-CFE4-4DB0-9DF6-EACB15628B86}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95428567-02AF-4975-A547-FE099089BFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95428567-02AF-4975-A547-FE099089BFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95428567-02AF-4975-A547-FE099089BFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5F5E60-108D-451F-B2E8-E0CFA54A16C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5F5E60-108D-451F-B2E8-E0CFA54A16C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5F5E60-108D-451F-B2E8-E0CFA54A16C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5F5E60-108D-451F-B2E8-E0CFA54A16C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
