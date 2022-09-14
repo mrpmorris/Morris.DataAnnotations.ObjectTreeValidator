@@ -4,24 +4,49 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 
 namespace Morris.DataAnnotations.ObjectTreeValidator;
 
 internal static class ValidatorCache
 {
-	private readonly static ConcurrentDictionary<Type, PropertyValidator[]> TypeToPropertyValidatorsLookup = new();
+	private readonly static ReaderWriterLockSlim Lock = new();
+	private readonly static Dictionary<Type, PropertyValidator[]> TypeToPropertyValidatorsLookup = new();
 
 	public static PropertyValidator[] CachePropertyValidators(Type type)
 	{
-		return TypeToPropertyValidatorsLookup.GetOrAdd(
-			key: type,
-			valueFactory: CreatePropertyValidators);
+		Lock.EnterUpgradeableReadLock();
+		try
+		{
+			if (TypeToPropertyValidatorsLookup.TryGetValue(type, out PropertyValidator[]? propertyValidators))
+				return propertyValidators;
+
+			Lock.EnterWriteLock();
+			try
+			{
+				return GetOrCreatePropertyValidators(type);
+			}
+			finally
+			{
+				Lock.ExitWriteLock();	
+			}
+		}
+		finally
+		{
+			Lock.ExitUpgradeableReadLock();
+		}
 	}
 
-	private static PropertyValidator[] CreatePropertyValidators(Type type)
+	private static PropertyValidator[] GetOrCreatePropertyValidators(Type type)
 	{
 		if (type.Assembly == typeof(object).Assembly)
 			return Array.Empty<PropertyValidator>();
+
+		if (TypeToPropertyValidatorsLookup.TryGetValue(type, out PropertyValidator[]? validators))
+			return validators;
+
+		// Temporarily add an entry to prevent endless loop
+		TypeToPropertyValidatorsLookup[type] = Array.Empty<PropertyValidator>();
 
 		List<KeyValuePair<PropertyInfo, PropertyValidator?>> propertiesAndValidators =
 			PropertyValidator
@@ -53,19 +78,21 @@ internal static class ValidatorCache
 				}
 			}
 		}
-		return propertiesAndValidators.Select(x => x.Value!).ToArray();
+		PropertyValidator[] result = propertiesAndValidators.Select(x => x.Value!).ToArray();
+		TypeToPropertyValidatorsLookup[type] = result;
+		return result;
 	}
 
 	private static bool HasSubValidators(KeyValuePair<PropertyInfo, PropertyValidator> item)
 	{
 		// Cache any validators on property type itself
-		bool propertyTypeHasSubValidators = CachePropertyValidators(item.Key.PropertyType).Any();
+		bool propertyTypeHasSubValidators = GetOrCreatePropertyValidators(item.Key.PropertyType).Any();
 
 		// If it's an IEnumerable<T> then cache properties on T also
 		bool enumerableElementTypeHasSubValidators = false;
 		Type? iGenericEnumerableElementType = item.Key.PropertyType.GetGenericEnumerableElementType();
 		if (iGenericEnumerableElementType is not null)
-			enumerableElementTypeHasSubValidators = CachePropertyValidators(iGenericEnumerableElementType).Any();
+			enumerableElementTypeHasSubValidators = GetOrCreatePropertyValidators(iGenericEnumerableElementType).Any();
 
 		return propertyTypeHasSubValidators || enumerableElementTypeHasSubValidators;
 	}
