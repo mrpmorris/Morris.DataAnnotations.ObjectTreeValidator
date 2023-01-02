@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		Library\Directory.Build.props = Library\Directory.Build.props
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorials", "Tutorials", "{3AB71436-916F-4A1D-BA2F-AD01A7DDD538}"
@@ -30,6 +31,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComplexTreeValidation", "Tutorials\03-ComplexTreeValidation\ComplexTreeValidation\ComplexTreeValidation.csproj", "{8F5133AE-ABB9-4CA5-9CF2-5BD2A865181F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morris.DataAnnotations.ObjectTreeValidator", "Library\Morris.DataAnnotations.ObjectTreeValidator\Morris.DataAnnotations.ObjectTreeValidator.csproj", "{1A5F5E60-108D-451F-B2E8-E0CFA54A16C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{D12434DC-F0B6-450D-97E7-4AD14A8ABA39}"
+	ProjectSection(SolutionItems) = preProject
+		..\Docs\releases.md = ..\Docs\releases.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
